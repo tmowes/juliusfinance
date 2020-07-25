@@ -1,0 +1,118 @@
+
+yarn add typescript @types/react @types/react-native @types/react-dom -D
+
+code tsconfig.json
+
+
+
+
+
+yarn add axios
+
+yarn add styled-components
+
+yarn add @types/styled-components -D
+
+yarn add react-is@16.8.0
+
+yarn add polished
+
+yarn add @react-navigation/native
+
+yarn add @react-navigation/stack
+
+yarn add @react-navigation/material-top-tabs react-native-tab-view
+
+yarn add @react-navigation/drawer
+
+expo install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+
+[#FIX]
+expo install expo-splash-screen
+
+[#ESLINT CONFIG]
+
+yarn add eslint -D
+
+yarn eslint --init
+
+yarn add -D eslint-plugin-react@^7.20.0 @typescript-eslint/eslint-plugin@latest eslint-config-airbnb@latest eslint@^6.8.0 eslint-plugin-import@^2.21.2 eslint-plugin-jsx-a11y@^6.3.0 eslint-plugin-react-hooks@^4 @typescript-eslint/parser@latest
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier eslint-import-resolver-typescript -D
+
+===================================================================
+
+code .prettierrc
+
+[#CONTENT .prettierrc]
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "semi": false
+}
+
+===================================================================
+
+code .eslintignore
+[#CONTENT .eslintignore]
+**/*.js
+node_modules
+build
+
+===================================================================
+
+code .editorconfig
+[#CONTENT .editorconfig]
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+indent_size = 2
+charset = utf-8
+insert_final_newline = false
+trim_trailing_whitespace = true
+
+===================================================================
+
+code .eslintrc.json
+[#CONTENT .eslintrc.json]
+
+{
+  "env": {
+    "es2020": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "rules": {
+    "react/style-prop-object": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "ts": "never", "tsx": "never" }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
