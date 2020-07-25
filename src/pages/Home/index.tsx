@@ -1,14 +1,13 @@
-import React from 'react';
-import { Text } from 'react-native';
+import React from 'react'
 
-import { Container } from './styles';
+import { Container, Title } from './styles'
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <Text>Home</Text>
+      <Title>H:\React\FinanceRepo\julius-finance</Title>
     </Container>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

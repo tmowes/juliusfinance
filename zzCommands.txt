@@ -3,9 +3,21 @@ yarn add typescript @types/react @types/react-native @types/react-dom -D
 
 code tsconfig.json
 
+[#CONTENT tsconfig.json]
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true
+  }
+}
 
-
-
+[#INSTALL BASIC DEPENDENCIES]
 
 yarn add axios
 
@@ -50,6 +62,7 @@ code .prettierrc
   "singleQuote": true,
   "trailingComma": "all",
   "arrowParens": "avoid",
+  "printWidth": 80,
   "semi": false
 }
 
