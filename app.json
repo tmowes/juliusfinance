@@ -1,0 +1,12 @@
+{
+  "name": "julius-finance",
+  "displayName": "julius-finance",
+  "expo": {
+    "name": "julius-finance",
+    "slug": "julius-finance",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
